@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background: rgb(238,174,202);
+            background:radial-gradient(circle,rgba(238,174,202,1) 0%,rgba(148,187,233,1) 100%);
+            font-size: 1.2em;
+        }
+        input{
+            border: none;
+        }
+        
+        input[type="submit"]{
+            border: none;
+            font-size: 1.1cm;
+            padding: 10px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: rgb(#800080, #008000, #0000ff);
+            color: black;
+            font-weight: bold;
+            transition: .5s;    
+        }
+        .abc{
+            width: fit-content;
+            border-radius:20px ;
+            padding: 30px;
+            box-shadow: 0 0 50px rgba(54,76,32);
+            transition: .7s;
+        }
+        .abc:hover{
+            box-shadow: 20px 20px 50px rgb(54, 76, 32);
+        }
+        input:hover{
+            box-shadow: -5px 5px 25px black;
+        }
+        .input:hover{
+            background-color: tomato;
+            color:#0000ff;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{usfo.as_p}}
+            {{pfo.as_p}}
+
+            
+            <input type="submit" value="Registration">
+        </form>
+    </center>
+</body>
+</html>
