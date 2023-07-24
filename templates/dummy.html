@@ -48,11 +48,16 @@
         <a href="{% url 'registration' %}" class="nav-link  ">Registration Page</a>
         <a href="{% url 'home' %}" class="nav-link  "> home Page</a>
 
+        <a href="{% url 'display_details' %}"class="nav-link">display_details</a>
 
+        
         {% if user.is_authenticated %}
-            <a href="{% url 'user_logout' %}"class="nav-link text-white">user_logout</a>
-        {% else %}
-            <a href="{% url 'user_login' %}" class="nav-link text-white">user_login</a>
+            <a href="{% url 'user_logout' %}"class="nav-link ">user_logout</a>
+            <a href="{% url 'Change_Password' %}" class="nav-link">change_password</a>
+        
+            {% else %}
+            <a href="{% url 'user_login' %}" class="nav-link ">user_login</a>
+            <a href="{% url 'reset_password' %}" class="nav-link">reset password</a>
         {% endif %}
 
     </nav>
