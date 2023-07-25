@@ -109,3 +109,22 @@ def reset_password(request):
 
 
     return render(request,'reset_password.html')
+
+
+                #[[OR]]
+
+# We can use either UP ONE or This ONE also.
+# def set_password(request):
+#     if request.method=='POST':
+#         un=request.POST['un']
+#         pw=request.POST['pw']
+
+#         LUO=User.objects.filter(username=un)
+#         if LUO:
+#             UO=LUO[0]
+#             UO.set_password(pw)
+#             UO.save()
+            
+#             return HttpResponse('reset_password is done')
+        
+#         return render(request,'reset_password.html')
